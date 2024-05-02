@@ -18,7 +18,7 @@ body, html {
 
 nav {
     width: 70px;
-    height: 42%;  /* 全高度 */
+    height: 400px;  /* 全高度 */
     position: fixed;  /* 固定位置 */
     left: 0;  /* 放置于左侧 */
     top: 20%;
