@@ -32,7 +32,7 @@ nav {
 }
 
 nav:hover {
-    width: 260px;
+    width: 200px;
 }
 
 .brand, .list li {
@@ -70,7 +70,7 @@ nav:hover .brand p, nav:hover .list span {
 
 .brand p span {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     color: #3c3e43;
 }
