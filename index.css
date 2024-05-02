@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#9fc0cf, #e5edf1);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+nav {
+    width: 70px;
+    height: 42%;  /* 全高度 */
+    position: fixed;  /* 固定位置 */
+    left: 0;  /* 放置于左侧 */
+    top: 20%;
+    padding: 10px;
+    border-radius: 0 12px 12px 0;  /* 右上右下圆角 */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);  /* 浅色半透明背景 */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+nav:hover {
+    width: 260px;
+}
+
+.brand, .list li {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 50px;
+    border-radius: 50%;
+    /* border: 4px solid rgba(255, 255, 255, 0); */
+}
+
+.brand p, .list span {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    /* transition: max-width 0.01s cubic-bezier(0.8, 0, 0.2, 1) 0.3s, opacity 0.3s ease; */
+    opacity: 0;
+}
+
+nav:hover .brand p, nav:hover .list span {
+    max-width: 180px;
+    /* 适当的最大宽度以显示完整文本 */
+    opacity: 1;
+}
+
+.brand p {   /* Hello */
+    margin-left: 12px;
+    color: #505257;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 22px;
+}
+
+.brand p span {
+    display: block;
+    font-size: 24px;
+    font-style: normal;
+    color: #3c3e43;
+}
+
+.line {
+    width: 90%;  /* 调整线条宽度 */
+    height: 1px;
+    margin: 12px auto;  /* 居中线条 */
+    background: #87a3af;
+    border-radius: 30%;
+}
+
+.list li {
+    margin: 6px 8px 6px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.list li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.list li.active {
+    background: #aeafaf;
+}
+
+.list li.active span {
+    color: #fff;
+}
+
+.list li.active i {
+    color: #e6ebf0;
+}
+
+.list i {
+    font-size: 18px;
+    color: #838487;
+    background: linear-gradient(-135deg, #3c3e43, #838487);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list span {
+    margin-left: 14px;
+    color: #383a3d;
+    font-size: 16px;
+    font-weight: 500;
+}
